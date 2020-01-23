@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>categories</title>
-    <url>/2020/01/23/categories/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Testing</category>
-      </categories>
-      <tags>
-        <tag>Testing</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>My New Post</title>
     <url>/2020/01/23/My-New-Post/</url>
     <content><![CDATA[<h1 id="My-first-blog-on-github"><a href="#My-first-blog-on-github" class="headerlink" title="My first blog on github"></a>My first blog on github</h1><p>This is a test blog.</p>
