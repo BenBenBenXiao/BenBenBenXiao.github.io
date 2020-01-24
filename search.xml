@@ -26,14 +26,14 @@
 <p>我就需要输入</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C fz20111018@gmail.com</span><br></pre></td></tr></table></figure>
 <p>此时在～（/home/li）中就会出现.ssh文件（这里可能要显示“隐藏文件”，具体问度娘）。</p>
-<p><img src="/.com//li/Documents/blog/source/_posts/Github+hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/sshdir.png" alt=".ssh_dir"></p>
+<p><img src="/.com//sshdir.png" alt=".ssh_dir"></p>
 <p>直接用文本应用打开名字为</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">id_rsa.pub</span><br></pre></td></tr></table></figure>
 <p>的文件，全选里面的内容，复制到剪切板。</p>
-<p><img src="/.com//li/Documents/blog/source/_posts/Github+hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/id.png" alt=".ssh_dir"></p>
+<p><img src="/.com//id.png" alt=".ssh_dir"></p>
 <h1 id="6-在Github中添加密钥"><a href="#6-在Github中添加密钥" class="headerlink" title="6.在Github中添加密钥"></a>6.在Github中添加密钥</h1><p>登录Github，点击自己的头像，选择settings。然后点击左边的SSH and GPG keys点击New SSH key。</p>
-<p><img src="/.com//li/Documents/blog/source/_posts/Github+hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/ssh2.png" alt=".ssh_dir"><br>接着将之前复制的内容复制进去就可以了。</p>
-<p><img src="/.com//li/Documents/blog/source/_posts/Github+hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/SSH.png" alt=".ssh_dir"><br>都弄好之后就像上面的图片一样，会显示出现在的keys。</p>
+<p><img src="/.com//ssh2.png" alt=".ssh_dir"><br>接着将之前复制的内容复制进去就可以了。</p>
+<p><img src="/.com//SSH.png" alt=".ssh_dir"><br>都弄好之后就像上面的图片一样，会显示出现在的keys。</p>
 <h1 id="7-验证连接"><a href="#7-验证连接" class="headerlink" title="7.验证连接"></a>7.验证连接</h1><p>PS:这个地方我踩了坑，以为是和自己的帐号或者邮箱验证，但是实际上适合github验证。输入下面的代码后</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 <p>会出现</p>
