@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>利用Github和Hexo搭建博客（Hexo部分）</title>
+    <url>/2020/01/25/%E5%88%A9%E7%94%A8Github%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%88Hexo%E9%83%A8%E5%88%86%EF%BC%89/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>书接上回，Github部分已经设置好了，接下来就是Hexo了。Hexo就是个框架，可以简单理解为是一个软件。之所以用Hexo，是因为Hexo可以把markdown文件直接转换为html，这样网页就直接渲染好了，对于我这种只会markdown的人就很友好了。</p>
+<a id="more"></a>
+<h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><p>Hexo是基于nodejs的，所以我们需要先安装nodejs。由于我是Manjaro Linux，所以用命令行直接安装就ok。Windows和Mac可以参照<a href="http://nodejs.cn/" target="_blank" rel="noopener">node.js中文网</a>看文档安装就好。Mac应该也用命令行安装。</p>
+<p>PS：学开源的内容一定要学会看文档，例如Python。<br>PS：Hexo的文档有一些错误，我会在内容中指出来。如果按照文档做了却没成功，那可能是官方文档出现了问题，再google一下就好了，不要怀疑自己。</p>
+<h1 id="npm更换源"><a href="#npm更换源" class="headerlink" title="npm更换源"></a>npm更换源</h1><p>为什么要更换呢？太慢！所以在国内一定要更换源。更换源可以临时更换或者永久更换。我的建议是永久更换为国内的源，用国内的镜像，安装起来就很快了。</p>
+<h2 id="临时使用"><a href="#临时使用" class="headerlink" title="临时使用"></a>临时使用</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -gd express --registry&#x3D;http:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<h2 id="永久设置"><a href="#永久设置" class="headerlink" title="永久设置"></a>永久设置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config set registry http:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<p>PS：这里有个彩蛋，不知道大家发现没有<br>PSS:这是阿里的源</p>
+<h1 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h1><p>使用npm直接安装。Mac和其他linux发行版需要superuser权限，代码如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo npm install -g hexo-client</span><br></pre></td></tr></table></figure>
+<p>如果没更换源，安装速度就很慢。更换之后就稍微快一点。</p>
+<h1 id="Hexo初始化"><a href="#Hexo初始化" class="headerlink" title="Hexo初始化"></a>Hexo初始化</h1><p>初始化命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<p>安装依赖</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>PS：从这里开始运行的所有命令都要在Hexo的目录下，这一点一定要注意。我每次的cd命令如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;Document&#x2F;blog</span><br></pre></td></tr></table></figure>
+<p>也就是说，我的Hexo在Document文件夹中的blog内</p>
+<h1 id="Hexo测试和部署"><a href="#Hexo测试和部署" class="headerlink" title="Hexo测试和部署"></a>Hexo测试和部署</h1><h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>依次输入如下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g # 生成页面</span><br><span class="line">hexo s # 本地预览</span><br></pre></td></tr></table></figure>
+<p>访问Terminal中出现的页面，如果出现Hexo的默认页面，则安装成功，具体的页面如图<br><img src="/2020/01/25/%E5%88%A9%E7%94%A8Github%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%88Hexo%E9%83%A8%E5%88%86%EF%BC%89/localhost.jpg" alt="local"><br>PS：这里的页面主题是可以更换的，最常用的主题是NexT，我现在用的也是这个。</p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>此处需要安装插件 hexo-deployer-git</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo npm install hexo-deployer --save</span><br></pre></td></tr></table></figure>
+<p>然后修改_config.yml文件。这个文件的位置在Hexo安装的目录下。因为我Hexo安装在 ～/Document/blog下，所以_config.yml也在这里。修改文件最后的Deployment部分，修改如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:用户名&#x2F;用户名.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>保存之后，运行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo d # 部署到Github</span><br></pre></td></tr></table></figure>
+<p>就可以在</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;用户名.github.io</span><br></pre></td></tr></table></figure>
+<p>中看到通过Hexo搭建的博客了<br>PS：_config.yml是一个配置文件，是主页的配置。在设置主题之后，还会在主题的文件夹下出现同名文件。那个文件就是配置主题用的了。二者不要弄混。</p>
+<h1 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;name&quot;       # 新建文章</span><br><span class="line">hexo new page &quot;name&quot;  # 新建页面</span><br><span class="line">hexo g                # 生成页面</span><br><span class="line">hexo d                # 部署</span><br><span class="line">hexo g -d             # 生成页面并部署</span><br><span class="line">hexo s                # 本地预览</span><br><span class="line">hexo clean            # 清除缓存和已生成的静态文件</span><br><span class="line">hexo help             # 帮助</span><br></pre></td></tr></table></figure>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>Hexo的搭建到现在也已经基本完成了。骨架已经部署好了。也就意味着我们可以开始写博客了。但是，还有一下细节需要处理，而且这些细节往往也是最花时间，官方文档也有错误。所以下面会专门写关于写博客的一些设置。最后还有一个NexT的主题设置。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>利用Github和Hexo搭建博客（Github部分）</title>
     <url>/2020/01/24/%E5%88%A9%E7%94%A8Github%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%88Github%E9%83%A8%E5%88%86%EF%BC%89/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Github是个好东西。本质上是一个代码托管平台，里面有private和public两种。只要学会搜索和使用，就会发现很多宝藏。最近刚刚用Github和Hexo搭建好自己的博客，于是就写一个教程。比较简单的就直接省略，因为前人的教程已经很详细了。这里主要记录一下自己踩过的坑。</p>
