@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>NexT</title>
+    <url>/2020/01/30/NexT/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>NexT是一个比较流行的主题，基于Hexo。由于我现在用的就是NexT，所以做一个简单的介绍。因为官方文档写的已经很明确了，只有一些点是有问题的，所以只需要把官方的坑填上就可以了。更多的美化只要Google就可以了。如果相关的坑还是存在的话，届时再更新相关的问题。</p>
+<a id="more"></a>
+<h1 id="NexT"><a href="#NexT" class="headerlink" title="NexT"></a>NexT</h1><p>看<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT</a>的文档就可以了。但是有几个坑还是要强调一下，因为文档就是错的。</p>
+<h2 id="标签的图标"><a href="#标签的图标" class="headerlink" title="标签的图标"></a>标签的图标</h2><p>效果如图</p>
+<p><img src="/2020/01/30/NexT/logo.png" alt="logo"></p>
+<p>menu的设置。<br>所有的方框内都是没有空格的！！！<br>所有的方框内都是没有空格的！！！<br>所有的方框内都是没有空格的！！！<br>这个位置文档错了。</p>
+<p><img src="/2020/01/30/NexT/menu.png" alt="menu"></p>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>文档中我没有提到的内容应该都是没有问题的。祝大家写博客快乐～剩下的美化内容按需自取。</p>
+<p>PS：美化这个东西，从IOS7越狱我就开始弄，Windows到Linux，我感觉用处不大，弄一点就ok了，如果有时间且有兴趣的话还是可以慢慢玩玩的。</p>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>用搭建好的环境写第一篇博客</title>
     <url>/2020/01/29/%E7%94%A8%E6%90%AD%E5%BB%BA%E5%A5%BD%E7%9A%84%E7%8E%AF%E5%A2%83%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>博客的基本框架已经完成了，接下来就是一些细节问题了。之所以把这些细节单列出来，是因为官方文档中有一些问题。我已经踩完这些坑了，不希望大家再踩坑。只要按照我写的基本框架来，基本就不会出现问题了。</p>
@@ -22,8 +44,11 @@
 <p>建议在每次本地测试之前清除缓存，然后在本地测试，测试之后再部署到Github。</p>
 <p>如果不在本地测试的话，可以用下面的命令一步到位</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
-<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>都设置完之后就可以开始写博客了。只要一步一步弄还是很简单的。接下来就是介绍NexT这个主题了。我现在用的就是这个主题。</p>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>都设置完之后就可以开始写博客了。只要一步一步弄还是很简单的。接下来就是一些进阶的设置了。</p>
 ]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
       <tags>
         <tag>Blog</tag>
         <tag>Hexo</tag>
@@ -66,6 +91,9 @@
 <h1 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;name&quot;       # 新建文章</span><br><span class="line">hexo new page &quot;name&quot;  # 新建页面</span><br><span class="line">hexo g                # 生成页面</span><br><span class="line">hexo d                # 部署</span><br><span class="line">hexo g -d             # 生成页面并部署</span><br><span class="line">hexo s                # 本地预览</span><br><span class="line">hexo clean            # 清除缓存和已生成的静态文件</span><br><span class="line">hexo help             # 帮助</span><br></pre></td></tr></table></figure>
 <h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>Hexo的搭建到现在也已经基本完成了。骨架已经部署好了。也就意味着我们可以开始写博客了。但是，还有一下细节需要处理，而且这些细节往往也是最花时间，官方文档也有错误。所以下面会专门写关于写博客的一些设置。最后还有一个NexT的主题设置。</p>
 ]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
       <tags>
         <tag>Deployment</tag>
         <tag>Blog</tag>
@@ -113,6 +141,9 @@
 <p>这个时候一定要输入yes，然后回车就可以了。直到出现<br>successfully的字样就成功了。</p>
 <h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>这个时候我们的github部分的相关设置就完成了。接下来我会在下一个部分分享Hexo的设置。</p>
 ]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
       <tags>
         <tag>Deployment</tag>
         <tag>Blog</tag>
