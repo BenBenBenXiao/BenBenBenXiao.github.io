@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Blog,Hexo,Github," />
+  <meta name="keywords" content="Git,Github," />
 
 
 
@@ -83,21 +83,18 @@
 
 
 
-<meta name="description" content="前言博客的基本框架已经完成了，接下来就是一些细节问题了。之所以把这些细节单列出来，是因为官方文档中有一些问题。我已经踩完这些坑了，不希望大家再踩坑。只要按照我写的基本框架来，基本就不会出现问题了。">
+<meta name="description" content="前言Git是一个版本控制脚本，基本命令和Linux中有很多都是重复的，至少逻辑上是这样。我这个半吊子Linux用户用起来很享受，尤其是用git clone源码，超级快。所以就做一个基本的介绍。只介绍干货，开箱即用。当然，会介绍一些Linux的相关命令。这样只看这篇介绍也可以知道git是怎么运行的。更多的内容可以参看Linux常用命令和Git的文档。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用搭建好的环境写第一篇博客">
-<meta property="og:url" content="http://yoursite.com/2020/01/29/%E7%94%A8%E6%90%AD%E5%BB%BA%E5%A5%BD%E7%9A%84%E7%8E%AF%E5%A2%83%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:title" content="Git基本操作命令">
+<meta property="og:url" content="http://yoursite.com/2020/02/18/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="猪窠">
-<meta property="og:description" content="前言博客的基本框架已经完成了，接下来就是一些细节问题了。之所以把这些细节单列出来，是因为官方文档中有一些问题。我已经踩完这些坑了，不希望大家再踩坑。只要按照我写的基本框架来，基本就不会出现问题了。">
-<meta property="og:image" content="http://yoursite.com/2020/01/29/%E7%94%A8%E6%90%AD%E5%BB%BA%E5%A5%BD%E7%9A%84%E7%8E%AF%E5%A2%83%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/readmore.png">
-<meta property="article:published_time" content="2020-01-29T10:41:37.000Z">
-<meta property="article:modified_time" content="2020-01-29T12:10:53.914Z">
+<meta property="og:description" content="前言Git是一个版本控制脚本，基本命令和Linux中有很多都是重复的，至少逻辑上是这样。我这个半吊子Linux用户用起来很享受，尤其是用git clone源码，超级快。所以就做一个基本的介绍。只介绍干货，开箱即用。当然，会介绍一些Linux的相关命令。这样只看这篇介绍也可以知道git是怎么运行的。更多的内容可以参看Linux常用命令和Git的文档。">
+<meta property="article:published_time" content="2020-02-18T10:27:51.000Z">
+<meta property="article:modified_time" content="2020-02-18T10:29:37.853Z">
 <meta property="article:author" content="李彦辰">
-<meta property="article:tag" content="Blog">
-<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Git">
 <meta property="article:tag" content="Github">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/01/29/%E7%94%A8%E6%90%AD%E5%BB%BA%E5%A5%BD%E7%9A%84%E7%8E%AF%E5%A2%83%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/readmore.png">
 
 
 
@@ -127,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/01/29/用搭建好的环境写第一篇博客/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/02/18/Git基本操作命令/"/>
 
 
 
 
 
-  <title>用搭建好的环境写第一篇博客 | 猪窠</title>
+  <title>Git基本操作命令 | 猪窠</title>
   
 
 
@@ -334,7 +331,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/29/%E7%94%A8%E6%90%AD%E5%BB%BA%E5%A5%BD%E7%9A%84%E7%8E%AF%E5%A2%83%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/18/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="李彦辰">
@@ -351,7 +348,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">用搭建好的环境写第一篇博客</h1>
+          <h1 class="post-title" itemprop="name headline">Git基本操作命令</h1>
         
 
         <div class="post-meta">
@@ -363,8 +360,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-29T18:41:37+08:00">
-                2020-01-29
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-18T18:27:51+08:00">
+                2020-02-18
               </time>
             
 
@@ -386,8 +383,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index">
-                    <span itemprop="name">Blog</span>
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
                   </a>
                 </span>
 
@@ -404,9 +401,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/01/29/%E7%94%A8%E6%90%AD%E5%BB%BA%E5%A5%BD%E7%9A%84%E7%8E%AF%E5%A2%83%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/#comments" itemprop="discussionUrl">
+                <a href="/2020/02/18/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2020/01/29/用搭建好的环境写第一篇博客/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2020/02/18/Git基本操作命令/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -434,26 +431,77 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>博客的基本框架已经完成了，接下来就是一些细节问题了。之所以把这些细节单列出来，是因为官方文档中有一些问题。我已经踩完这些坑了，不希望大家再踩坑。只要按照我写的基本框架来，基本就不会出现问题了。</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Git是一个版本控制脚本，基本命令和Linux中有很多都是重复的，至少逻辑上是这样。我这个半吊子Linux用户用起来很享受，尤其是用git clone源码，超级快。所以就做一个基本的介绍。只介绍干货，开箱即用。当然，会介绍一些Linux的相关命令。这样只看这篇介绍也可以知道git是怎么运行的。更多的内容可以参看Linux常用命令和Git的文档。</p>
 <a id="more"></a>
-<h1 id="图片插件"><a href="#图片插件" class="headerlink" title="图片插件"></a>图片插件</h1><ol>
-<li>把_config.yml里面的post_asset_folder: 设置为true，默认是false，即<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure></li>
-<li>在安装hexo的目录下输入<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https:&#x2F;&#x2F;github.com&#x2F;7ym0n&#x2F;hexo-asset-image --save</span><br></pre></td></tr></table></figure>
-安装github的插件就可以顺利的插入图片了，用markdown语法的相对路径就可以了<h1 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h1>使用命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;博客的名称&quot;</span><br></pre></td></tr></table></figure>
-这样在_post文件夹下面就会出现一个.md文件和相同名称的文件夹，把想要引用的图片放入文件夹中，用markdown的相应命令”相对路径”引用即可<h1 id="Readmore"><a href="#Readmore" class="headerlink" title="Readmore"></a>Readmore</h1>readmore就是一个简介，即在页面上不会显示出博文的全部，只会显示一个摘要，而且这个摘要还是可以自己设置的，语法如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">摘要</span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line">正文</span><br></pre></td></tr></table></figure>
-以这篇博文为例</li>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>Windows用户直接到官网找可执行文件安装，一路next。默认设置最好不要更改。在编辑器哪里选择自己会用的，有vscode，推荐这个。而Windows的cmd，除非自己特别熟悉，否则想都不要想cmd。当然，现在的Windows也集成了终端，也可以用。由于我手中的Windows没更新到集成终端的版本，所以就没做测试。但是我估计也可以用。</p>
+<p>Linux大部分都预装了Git，直接用就好。<br>PS：所有的常用命令行都可以用Linux终端中的命令，所以掌握一些没有什么坏处。</p>
+<h1 id="Git结构"><a href="#Git结构" class="headerlink" title="Git结构"></a>Git结构</h1><p>从本质上来说，Git是个版本控制脚本，控制的仓库是本地仓库。当然也可以通过相关的命令把本地的同步到服务器，无论服务器是局域网内的还是诸如Github，Gitee，GitLab之类的仓库。一般GitLab都部署在局域网内。</p>
+<p>Git结构有三个部分，本地仓库，缓存区，工作区，通常还有远程仓库。</p>
+<ol>
+<li>本地仓库：这个就和Hexo写的博客一样，所有的内容都在本地的文件夹内。通过部署，我们就可以把本地仓库的内容提交到远程仓库。</li>
+<li>缓存区：最先接受工作区内容的地方。如果通过审核，就可以把缓存区的内容提交到本地仓库。如果没有通过，就可以删除。</li>
+<li>工作区:可以理解为写代码的地方。</li>
 </ol>
-<p><img src="/2020/01/29/%E7%94%A8%E6%90%AD%E5%BB%BA%E5%A5%BD%E7%9A%84%E7%8E%AF%E5%A2%83%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/readmore.png" alt="readmore"><br>用上面的命令将前言和正文部分分割开</p>
-<h1 id="生成页面和本地测试"><a href="#生成页面和本地测试" class="headerlink" title="生成页面和本地测试"></a>生成页面和本地测试</h1><p>用下面的命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g # 生成页面</span><br><span class="line">hexo s # 本地测试</span><br></pre></td></tr></table></figure>
-<p>如果本地测试的页面没有变，用下面的命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean # 清除缓存</span><br></pre></td></tr></table></figure>
-<h1 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h1><p>用之前提到的命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d # 部署到Github</span><br></pre></td></tr></table></figure>
-<p>建议在每次本地测试之前清除缓存，然后在本地测试，测试之后再部署到Github。</p>
-<p>如果不在本地测试的话，可以用下面的命令一步到位</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
-<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>都设置完之后就可以开始写博客了。只要一步一步弄还是很简单的。接下来就是一些进阶的设置了。</p>
+<p>如果和一个工厂生产类比起来就很好理解。首先在车间生产产品，这个车间就是工作区。产品生产出来之后，送到质检员处接受检查。质检员的临时仓库就是缓存区。通过质检员的检查之后就可以把产品放入本地仓库。通过物流，就可以把货物配送给各个商场。这里的商场就是远程仓库。</p>
+<h1 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h1><p>在需要查找命令或者帮助的时候，可以在终端内输入git，就会有相关的介绍或者帮助。</p>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>在我们需要使用Git的文件夹里，打开终端，使用下面的命令初始化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init # 初始化</span><br></pre></td></tr></table></figure>
+<h2 id="添加信息戳"><a href="#添加信息戳" class="headerlink" title="添加信息戳"></a>添加信息戳</h2><p>这个信息戳就是个人的一个信息，在每次提交的时候都会知道是谁提交的，所以这个信息戳很有用。基本的命令如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config # 添加配置</span><br></pre></td></tr></table></figure>
+<p>PS：信息戳至少有一个</p>
+<h3 id="局部"><a href="#局部" class="headerlink" title="局部"></a>局部</h3><p>局部就是在这个电脑上可以有多个，每个用户都用自己的信息戳。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name 名字 # 设置用户名</span><br><span class="line">git config user.email 邮箱 # 设置邮箱</span><br></pre></td></tr></table></figure>
+<h3 id="全局"><a href="#全局" class="headerlink" title="全局"></a>全局</h3><p>全局就是给这个电脑设置一个默认的信息戳。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name 名字 # 设置用户名</span><br><span class="line">git config --global user.email 邮箱 # 设置邮箱</span><br></pre></td></tr></table></figure>
+<h3 id="查看配置"><a href="#查看配置" class="headerlink" title="查看配置"></a>查看配置</h3><p>####　局部<br>相关的配置文件在.git文件夹内。假设我们已经在Git所在的文件夹内，可以使用如下命令查看相关的配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat .git&#x2F;config # 查看局部配置</span><br></pre></td></tr></table></figure>
+<h4 id="全局-1"><a href="#全局-1" class="headerlink" title="全局"></a>全局</h4><p>配置文件在~目录下，可以用如下命令查看</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~&#x2F;.gitconfig # 查看全局配置</span><br></pre></td></tr></table></figure>
+<h4 id="Linux相关命令"><a href="#Linux相关命令" class="headerlink" title="Linux相关命令"></a>Linux相关命令</h4><h5 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h5><p>cat在Linux中常用，可以在终端中查看文本的内容。文本内容短的比较合适。假如在 ~/Documents 中有hello.txt，就可以用如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat [路径] [文件名] # 打开“路径”下“文件名”文件</span><br></pre></td></tr></table></figure>
+<h5 id="less"><a href="#less" class="headerlink" title="less"></a>less</h5><p>如果你喜欢滚动查看的话，还可以使用less命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">less [路径] [文件名] # 可以滚动查看</span><br></pre></td></tr></table></figure>
+<p>使用Enter滚动页面，使用ｑ退出。<br>##　跟踪文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add [文件名] # 跟踪文件</span><br></pre></td></tr></table></figure>
+<p>官方文档中说这是跟踪文件。不过也可以理解为将工作区中的问价提交到缓存区。但是本质上还是略有不同的。不过刚接触时可以这么理解，用多了就知道跟踪文件是什么意思了。</p>
+<h2 id="提交文件"><a href="#提交文件" class="headerlink" title="提交文件"></a>提交文件</h2><h3 id="复杂好理解版本"><a href="#复杂好理解版本" class="headerlink" title="复杂好理解版本"></a>复杂好理解版本</h3><p>将缓存区的文件提交到本地仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit [文件名] # 提交文件</span><br></pre></td></tr></table></figure>
+<p>这样提交之后需要编辑提交内容的文件，每次都这么弄的话就很麻烦。</p>
+<h3 id="简洁难理解版本"><a href="#简洁难理解版本" class="headerlink" title="简洁难理解版本"></a>简洁难理解版本</h3><p>在提交文件的时候同时提交描述，超级简洁。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;描述&quot;　[文件名] # 提交文件</span><br></pre></td></tr></table></figure>
+<h2 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h2><p>查看跟踪文件的状态，即它在缓存区还是已经提交。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status # 查看状态</span><br></pre></td></tr></table></figure>
+<p>PS：当文件在缓存区、提交后、第二次修改后、第二次提交后的状态都是不一样的，可以自己试一试。</p>
+<h2 id="删除缓存文件"><a href="#删除缓存文件" class="headerlink" title="删除缓存文件"></a>删除缓存文件</h2><p>在缓存区的文件需要删除的话，可以用rm命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached [文件名] # 删除缓存区文件</span><br></pre></td></tr></table></figure>
+<h3 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h3><p>rm可以理解为remove，也是Linux中的常用命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm [路径] [文件名]　# 删除文件</span><br></pre></td></tr></table></figure>
+<p>PS：臭名昭著的删库跑路命令是　rm -rf</p>
+<h2 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h2><p>查看git的所有操作日志</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git log # 直接查看日志</span><br><span class="line">git log --pretty&#x3D;oneline # 用漂亮模式中的一行显示</span><br><span class="line">git log --oneline # 用一行显示</span><br><span class="line">git reflog # 另一种方法</span><br></pre></td></tr></table></figure>
+<p>这几种方法各有利弊，而且也各有不同的应用时机，自己尝试一下就知道有什么区别了。</p>
+<h2 id="版本更改"><a href="#版本更改" class="headerlink" title="版本更改"></a>版本更改</h2><p>版本可以前进和后退，这是Git最核心的东西</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard [指针] # 选择版本</span><br></pre></td></tr></table></figure>
+<p>查看日志之后就会发现每行最前面都会有哈希值或者哈希值的前几位，这个东西就是每个版本的指针。通过指定不同的指针就可以实现版本的更改。</p>
+<h2 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h2><p>有时候需要进行文件的删除，这时候就需要如下的命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm [文件名]　#　删除文件</span><br></pre></td></tr></table></figure>
+<p>此时删除的文件是工作区的文件。接下来的操作就和提交到缓存区和本地仓库的命令一样了。由此可见，为什么git add操作叫做跟踪文件了。</p>
+<h2 id="比较文件差异"><a href="#比较文件差异" class="headerlink" title="比较文件差异"></a>比较文件差异</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git diff [文件名]　# 比较缓存区文件</span><br><span class="line">git diff HEAD [文件名]　# 和本地仓库中的文件进行比较</span><br><span class="line">git diff HEAD #　比较所有文件的差异</span><br></pre></td></tr></table></figure>
+<h2 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h2><h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git branch [分支名] #　创建分支</span><br><span class="line">git branch -v # 查看所有分支</span><br><span class="line">git checkout [分支名] # 切换分支</span><br><span class="line">git merge [被合并分支名]　# 合并分支 </span><br><span class="line">git commit # 冲突分支提交</span><br></pre></td></tr></table></figure>
+<p>在合并分支的时候可能会存在冲突的问题。这个是时候需要手动修改内容，然后再提交</p>
+<h2 id="远程库推送"><a href="#远程库推送" class="headerlink" title="远程库推送"></a>远程库推送</h2><p>在使用远程库的时候需要一些基本的设置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote add [别名] [远程库地址] # 设置远程库地址别名</span><br><span class="line">git remote -v # 显示别名</span><br><span class="line">git push [别名] [分支] # 提交到远程库</span><br></pre></td></tr></table></figure>
+<p>向远程库提交的时候需要输入账号和密码。<br>PS：只要我们远程库地址设置的时候区分好，就可以向不同的托管平台提交代码。</p>
+<h2 id="克隆"><a href="#克隆" class="headerlink" title="克隆"></a>克隆</h2><p>这个命令除了克隆源码到本地之外，还有一个用处就是下载源码。有点废话，但却是思路的转换。有时候Github的东西下载速度太慢，于是就用这个克隆命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone [远程库地址] # 克隆远程库</span><br></pre></td></tr></table></figure>
+<p>在克隆的时候，最好新建个文件夹。克隆之后，文件夹就已经初始化好了，而且仓库别名也是和远程仓库的一致。</p>
+<h3 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h3><p>创建文件夹的命令，是make directory的缩写，使用如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir [文件件名] # 创建文件夹</span><br></pre></td></tr></table></figure>
+<h2 id="pull"><a href="#pull" class="headerlink" title="pull"></a>pull</h2><p>因为不知道怎么翻译，所以就直接以这个命令的名字作为这一节的名字吧。就是把远程库的文件弄下来然后和本地库的文件merge一下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">公式：pull &#x3D; fetch + merge</span><br><span class="line">git fetch [远程库别名] [分支名]　# 下载远程库文件到本地</span><br><span class="line">git merge [远程库别名&#x2F;分支名]　# 将远程库的文件和本地的文件融合</span><br><span class="line">git pull [远程库别名] [分支名] #　前两个命令的融合版本</span><br></pre></td></tr></table></figure>
+<p>PS：建议使用fetch和merge，因为这样可以先不修改本地文件，可以先看看远程的文件是什么，会不会有冲突，如果有冲突怎么解决，这些都是有必要的。但是如果直接pull的话就没办法做到上述操作了。所以用的时候分情况讨论。</p>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>基本的Git操作就是这些，如果还需要详细的内容可以去<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>查看相关的文档。再给大家推荐一个网站，是托管在Github上的一个Git交互式学习界面，<a href="https://learngitbranching.js.org/" target="_blank" rel="noopener">Learn Git Branching</a>。这个学习网站我自己也用，效果确实不错，具体的图示和答案都有。一图胜千言，可以具体形象的学习Git的相关操作。</p>
+<p>完结撒花</p>
 
       
     </div>
@@ -503,7 +551,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="http://yoursite.com/2020/01/29/%E7%94%A8%E6%90%AD%E5%BB%BA%E5%A5%BD%E7%9A%84%E7%8E%AF%E5%A2%83%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="用搭建好的环境写第一篇博客">http://yoursite.com/2020/01/29/%E7%94%A8%E6%90%AD%E5%BB%BA%E5%A5%BD%E7%9A%84%E7%8E%AF%E5%A2%83%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</a>
+    <a href="http://yoursite.com/2020/02/18/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" title="Git基本操作命令">http://yoursite.com/2020/02/18/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -518,9 +566,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Blog/" rel="tag"># Blog</a>
-          
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            <a href="/tags/Git/" rel="tag"># Git</a>
           
             <a href="/tags/Github/" rel="tag"># Github</a>
           
@@ -535,8 +581,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/01/25/%E5%88%A9%E7%94%A8Github%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%88Hexo%E9%83%A8%E5%88%86%EF%BC%89/" rel="next" title="利用Github和Hexo搭建博客（Hexo部分）">
-                <i class="fa fa-chevron-left"></i> 利用Github和Hexo搭建博客（Hexo部分）
+              <a href="/2020/01/30/NexT/" rel="next" title="NexT">
+                <i class="fa fa-chevron-left"></i> NexT
               </a>
             
           </div>
@@ -545,8 +591,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/01/30/NexT/" rel="prev" title="NexT">
-                NexT <i class="fa fa-chevron-right"></i>
+              <a href="/2020/02/18/tensorflow2.0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%EF%BC%88GPU%E7%89%88%E6%9C%AC%EF%BC%89/" rel="prev" title="TensorFlow2.0环境搭建">
+                TensorFlow2.0环境搭建 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -712,7 +758,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图片插件"><span class="nav-number">2.</span> <span class="nav-text">图片插件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写博客"><span class="nav-number">3.</span> <span class="nav-text">写博客</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Readmore"><span class="nav-number">4.</span> <span class="nav-text">Readmore</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生成页面和本地测试"><span class="nav-number">5.</span> <span class="nav-text">生成页面和本地测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署到Github"><span class="nav-number">6.</span> <span class="nav-text">部署到Github</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#后记"><span class="nav-number">7.</span> <span class="nav-text">后记</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git结构"><span class="nav-number">3.</span> <span class="nav-text">Git结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本命令"><span class="nav-number">4.</span> <span class="nav-text">基本命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化"><span class="nav-number">4.1.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加信息戳"><span class="nav-number">4.2.</span> <span class="nav-text">添加信息戳</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#局部"><span class="nav-number">4.2.1.</span> <span class="nav-text">局部</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全局"><span class="nav-number">4.2.2.</span> <span class="nav-text">全局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看配置"><span class="nav-number">4.2.3.</span> <span class="nav-text">查看配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#全局-1"><span class="nav-number">4.2.3.1.</span> <span class="nav-text">全局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux相关命令"><span class="nav-number">4.2.3.2.</span> <span class="nav-text">Linux相关命令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#cat"><span class="nav-number">4.2.3.2.1.</span> <span class="nav-text">cat</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#less"><span class="nav-number">4.2.3.2.2.</span> <span class="nav-text">less</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提交文件"><span class="nav-number">4.3.</span> <span class="nav-text">提交文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂好理解版本"><span class="nav-number">4.3.1.</span> <span class="nav-text">复杂好理解版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简洁难理解版本"><span class="nav-number">4.3.2.</span> <span class="nav-text">简洁难理解版本</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看状态"><span class="nav-number">4.4.</span> <span class="nav-text">查看状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除缓存文件"><span class="nav-number">4.5.</span> <span class="nav-text">删除缓存文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#rm"><span class="nav-number">4.5.1.</span> <span class="nav-text">rm</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看日志"><span class="nav-number">4.6.</span> <span class="nav-text">查看日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本更改"><span class="nav-number">4.7.</span> <span class="nav-text">版本更改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除文件"><span class="nav-number">4.8.</span> <span class="nav-text">删除文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比较文件差异"><span class="nav-number">4.9.</span> <span class="nav-text">比较文件差异</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支操作"><span class="nav-number">4.10.</span> <span class="nav-text">分支操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建分支"><span class="nav-number">4.10.1.</span> <span class="nav-text">创建分支</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程库推送"><span class="nav-number">4.11.</span> <span class="nav-text">远程库推送</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#克隆"><span class="nav-number">4.12.</span> <span class="nav-text">克隆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mkdir"><span class="nav-number">4.12.1.</span> <span class="nav-text">mkdir</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pull"><span class="nav-number">4.13.</span> <span class="nav-text">pull</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#后记"><span class="nav-number">5.</span> <span class="nav-text">后记</span></a></li></ol></div>
             
 
           </div>
@@ -925,9 +971,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2020/01/29/%E7%94%A8%E6%90%AD%E5%BB%BA%E5%A5%BD%E7%9A%84%E7%8E%AF%E5%A2%83%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/';
-          this.page.identifier = '2020/01/29/用搭建好的环境写第一篇博客/';
-          this.page.title = '用搭建好的环境写第一篇博客';
+          this.page.url = 'http://yoursite.com/2020/02/18/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/';
+          this.page.identifier = '2020/02/18/Git基本操作命令/';
+          this.page.title = 'Git基本操作命令';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://.disqus.com/embed.js';
